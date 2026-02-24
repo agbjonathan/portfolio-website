@@ -179,10 +179,7 @@
 .nav__mobile-link:hover { color: var(--accent); }
 
 .nav__mobile-lang {
-  display: flex;
-  gap: 0.3rem;
-  padding-top: 0.75rem;
-  border-top: 1px solid var(--rule);
+  display: none;
 }
 
 
