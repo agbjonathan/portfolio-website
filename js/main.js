@@ -21,7 +21,8 @@
        1. Language toggle
     ═══════════════════════════════════════════ */
 
-    let currentLang = 'en';
+    // Load saved language preference or default to 'en'
+    let currentLang = localStorage.getItem('lang') || 'en';
 
     const allLangBtns = document.querySelectorAll('.nav__lang-btn, .nav__mobile-lang .nav__lang-btn');
     const translatables = document.querySelectorAll('[data-fr]');
@@ -33,6 +34,7 @@
 
     function applyLang(lang) {
       currentLang = lang;
+      localStorage.setItem('lang', lang);
 
       // Update all translatable elements
       translatables.forEach(function (el) {
@@ -47,6 +49,9 @@
       // Update html lang attribute for accessibility
       document.documentElement.lang = lang;
     }
+
+    // Apply saved language on page load
+    applyLang(currentLang);
 
     allLangBtns.forEach(function (btn) {
       btn.addEventListener('click', function () {
