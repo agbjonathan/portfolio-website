@@ -3,6 +3,31 @@
    ════════════════════════════════════════════ */
 
 @media print {
+  /* Page setup */
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  /* Force consistent color rendering */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Preserve links in PDF */
+  a[href] {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* Keep contact links clickable in PDF */
+  .cv-header__contact a {
+    color: #1A1714;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
   /* Hide nav, download button, and any no-print elements */
   .no-print,
   .nav,
@@ -14,6 +39,8 @@
     height: auto;
     overflow: visible;
     background: #fff;
+    margin: 0;
+    padding: 0;
   }
 
   body {
@@ -43,7 +70,8 @@
     padding: 8mm 10mm;
     box-shadow: none;
     border-radius: 0;
-    font-size: 10pt;
+    font-size: 9.5pt;
+    box-sizing: border-box;
   }
 
   .cv-header {
@@ -56,16 +84,16 @@
   }
 
   .cv-header__title {
-    font-size: 9pt;
+    font-size: 8.5pt;
   }
 
   .cv-header__contact {
-    font-size: 9pt;
+    font-size: 8.5pt;
     gap: 2pt;
   }
 
   .cv-body {
-    grid-template-columns: 145pt 1fr;
+    grid-template-columns: 150pt 1fr;
     gap: 12pt;
     height: auto;
   }
@@ -79,11 +107,11 @@
   }
 
   .cv-sidebar .cv-section {
-    margin-bottom: 7pt;
+    margin-bottom: 8pt;
   }
 
   .cv-section__title {
-    font-size: 8pt;
+    font-size: 7.5pt;
     margin-bottom: 4pt;
     padding-bottom: 2pt;
   }
@@ -93,11 +121,11 @@
   }
 
   .cv-skill__label {
-    font-size: 9pt;
+    font-size: 8.5pt;
   }
 
   .cv-skill__value {
-    font-size: 8.5pt;
+    font-size: 8pt;
   }
 
   .cv-list {
@@ -105,13 +133,13 @@
   }
 
   .cv-list li {
-    font-size: 9pt;
+    font-size: 8.5pt;
     padding-left: 6pt;
     line-height: 1.35;
   }
 
   .cv-profile {
-    font-size: 9.5pt;
+    font-size: 9pt;
     line-height: 1.4;
   }
 
@@ -136,7 +164,7 @@
   }
 
   .cv-entry__note {
-    font-size: 8pt;
+    font-size: 7.5pt;
   }
 
   .cv-entry__tech {
@@ -154,10 +182,5 @@
     padding-left: 7pt;
     margin-bottom: 1pt;
     line-height: 1.35;
-  }
-
-  @page {
-    size: A4;
-    margin: 0;
   }
 }
