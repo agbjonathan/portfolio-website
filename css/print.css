@@ -40,120 +40,120 @@
     height: auto;
     max-width: none;
     margin: 0;
-    padding: 10mm 12mm;
+    padding: 6mm 8mm;
     box-shadow: none;
     border-radius: 0;
-    font-size: 11pt;
+    font-size: 9pt;
   }
 
   .cv-header {
-    padding-bottom: 8pt;
-    margin-bottom: 10pt;
+    padding-bottom: 4pt;
+    margin-bottom: 6pt;
   }
 
   .cv-header__name {
-    font-size: 20pt;
+    font-size: 16pt;
   }
 
   .cv-header__title {
-    font-size: 9pt;
+    font-size: 8pt;
   }
 
   .cv-header__contact {
-    font-size: 9pt;
-    gap: 2pt;
+    font-size: 8pt;
+    gap: 1pt;
   }
 
   .cv-body {
-    grid-template-columns: 160pt 1fr;
-    gap: 14pt;
+    grid-template-columns: 140pt 1fr;
+    gap: 10pt;
     height: auto;
   }
 
   .cv-sidebar {
-    padding: 8pt;
+    padding: 4pt;
   }
 
   .cv-section {
-    margin-bottom: 9pt;
+    margin-bottom: 4pt;
   }
 
   .cv-sidebar .cv-section {
-    margin-bottom: 11pt;
+    margin-bottom: 6pt;
   }
 
   .cv-section__title {
-    font-size: 8pt;
-    margin-bottom: 5pt;
-    padding-bottom: 2pt;
+    font-size: 7pt;
+    margin-bottom: 3pt;
+    padding-bottom: 1pt;
   }
 
   .cv-skills {
-    gap: 4pt;
+    gap: 2pt;
   }
 
   .cv-skill__label {
-    font-size: 9.5pt;
+    font-size: 8pt;
   }
 
   .cv-skill__value {
-    font-size: 9pt;
+    font-size: 7.5pt;
   }
 
   .cv-list {
-    gap: 3pt;
+    gap: 1pt;
   }
 
   .cv-list li {
-    font-size: 9.5pt;
-    padding-left: 7pt;
-    line-height: 1.4;
+    font-size: 8pt;
+    padding-left: 5pt;
+    line-height: 1.3;
   }
 
   .cv-profile {
-    font-size: 10pt;
-    line-height: 1.45;
+    font-size: 8.5pt;
+    line-height: 1.35;
   }
 
   .cv-main .cv-section {
-    margin-bottom: 9pt;
+    margin-bottom: 4pt;
   }
 
   .cv-entry {
-    margin-bottom: 7pt;
-  }
-
-  .cv-entry__title {
-    font-size: 10.5pt;
-  }
-
-  .cv-entry__date {
-    font-size: 8.5pt;
-  }
-
-  .cv-entry__sub {
-    font-size: 9.5pt;
-  }
-
-  .cv-entry__note {
-    font-size: 8.5pt;
-  }
-
-  .cv-entry__tech {
-    font-size: 8.5pt;
-    margin-top: 2pt;
     margin-bottom: 3pt;
   }
 
+  .cv-entry__title {
+    font-size: 8.5pt;
+  }
+
+  .cv-entry__date {
+    font-size: 7.5pt;
+  }
+
+  .cv-entry__sub {
+    font-size: 7.5pt;
+  }
+
+  .cv-entry__note {
+    font-size: 7pt;
+  }
+
+  .cv-entry__tech {
+    font-size: 7.5pt;
+    margin-top: 0pt;
+    margin-bottom: 1pt;
+  }
+
   .cv-entry__list {
-    margin-top: 3pt;
+    margin-top: 1pt;
   }
 
   .cv-entry__list li {
-    font-size: 9.5pt;
-    padding-left: 9pt;
-    margin-bottom: 2pt;
-    line-height: 1.4;
+    font-size: 7.5pt;
+    padding-left: 6pt;
+    margin-bottom: 0pt;
+    line-height: 1.3;
   }
 
   @page {
