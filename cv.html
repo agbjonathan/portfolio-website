@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jonathan Agba – CV / Resume" />
+  <title>CV – Jonathan Agba</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <!-- CSS: Base → Components → Page-specific → Print -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages/cv.css" />
+  <link rel="stylesheet" href="css/print.css" />
+</head>
+<body>
+
+  <!-- NAV (loaded dynamically) -->
+  <div data-component="nav" data-nav-scrolled="true"></div>
+
+  <!-- Download Button (bottom right) -->
+  <button class="cv-download no-print" aria-label="Download PDF">
+    <span class="cv-download__icon">↓</span>
+    <span class="cv-download__text" data-fr="Télécharger">Download PDF</span>
+  </button>
+
+  <!-- CV Page -->
+  <div class="cv-page">
+
+    <!-- Header -->
+    <header class="cv-header">
+      <div class="cv-header__main">
+        <h1 class="cv-header__name">JONATHAN AGBA</h1>
+        <p class="cv-header__title" data-fr="Diplômé en Génie Logiciel">Software Engineering Graduate</p>
+      </div>
+      <div class="cv-header__contact">
+        <a href="mailto:contact@jonathan-agba.com">contact@jonathan-agba.com</a>
+        <a href="https://linkedin.com/in/jonathan-agba-lidaw" target="_blank" rel="noopener">linkedin.com/in/jonathan-agba-lidaw</a>
+        <span>Longueuil, Québec</span>
+      </div>
+    </header>
+
+    <!-- Two Column Layout -->
+    <div class="cv-body">
+
+      <!-- Left Column -->
+      <aside class="cv-sidebar">
+
+        <!-- Skills -->
+        <section class="cv-section">
+          <h2 class="cv-section__title" data-fr="Compétences">Skills</h2>
+          
+          <div class="cv-skills">
+            <div class="cv-skill">
+              <span class="cv-skill__label" data-fr="Langages">Programming</span>
+              <span class="cv-skill__value">C, C++, Java, JavaScript, Python, TypeScript, Node.js</span>
+            </div>
+            <div class="cv-skill">
+              <span class="cv-skill__label">Frameworks</span>
+              <span class="cv-skill__value">Angular, React, Spring Boot</span>
+            </div>
+            <div class="cv-skill">
+              <span class="cv-skill__label" data-fr="Bases de données">Databases</span>
+              <span class="cv-skill__value">SQL Server, MySQL, Firestore, PostgreSQL</span>
+            </div>
+            <div class="cv-skill">
+              <span class="cv-skill__label">Cloud & DevOps</span>
+              <span class="cv-skill__value">Docker, Firebase, Cloud Run, GitHub, GitLab, Azure</span>
+            </div>
+            <div class="cv-skill">
+              <span class="cv-skill__label" data-fr="Méthodologies">Methodologies</span>
+              <span class="cv-skill__value">Agile / Scrum</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Languages -->
+        <section class="cv-section">
+          <h2 class="cv-section__title" data-fr="Langues">Languages</h2>
+          <ul class="cv-list">
+            <li data-fr="Français (langue maternelle)">French (native)</li>
+            <li data-fr="Anglais (intermédiaire)">English (intermediate)</li>
+          </ul>
+        </section>
+
+        <!-- Strengths -->
+        <section class="cv-section">
+          <h2 class="cv-section__title" data-fr="Points forts">Strengths</h2>
+          <ul class="cv-list">
+            <li data-fr="Esprit d'équipe et communication">Strong teamwork & communication</li>
+            <li data-fr="Apprentissage rapide, adaptable">Quick learner, adaptable, autonomous</li>
+            <li data-fr="Analyse et résolution de problèmes">Problem-solving & analytical thinking</li>
+            <li data-fr="Organisé, rigoureux et fiable">Organized, structured, and reliable</li>
+            <li data-fr="Autonome et proactif">Initiative-driven and proactive</li>
+          </ul>
+        </section>
+
+      </aside>
+
+      <!-- Right Column (Main Content) -->
+      <main class="cv-main">
+
+        <!-- Profile -->
+        <section class="cv-section">
+          <h2 class="cv-section__title">Profile</h2>
+          <p class="cv-profile" data-fr="Diplômé en génie logiciel proactif et soucieux du détail, avec une expérience pratique en développement web, en intégration backend et en conception de bases de données. Fortes capacités d'analyse, excellente communication et aptitude prouvée à apprendre rapidement. Reconnu comme un collaborateur avec un esprit de résolution de problèmes et passionné par la data et l'intelligence artificielle/apprentissage automatique, avec un intérêt marqué pour leur application à la résolution de problèmes concrets. À la recherche d'une opportunité pour contribuer à une équipe innovante.">
+            Detail-oriented and proactive Software Engineering graduate with hands-on experience in web and mobile development, backend integration, and database design. Strong analytical abilities, excellent communication skills, and a proven capacity to learn quickly and adapt to new technologies. Recognized as a collaborative team player with a problem-solving mindset and passionate about data and artificial intelligence (machine learning), with a strong interest in their application to solving real-world problems. Seeking an opportunity to contribute to a forward-thinking organization.
+          </p>
+        </section>
+
+        <!-- Education -->
+        <section class="cv-section">
+          <h2 class="cv-section__title" data-fr="Formation">Education</h2>
+          
+          <div class="cv-entry">
+            <div class="cv-entry__header">
+              <span class="cv-entry__title" data-fr="Baccalauréat en Informatique et Génie logiciel">Bachelor of Computer Science and Software Engineering</span>
+              <span class="cv-entry__date" data-fr="Avril 2025">Apr 2025</span>
+            </div>
+            <span class="cv-entry__sub">Université du Québec à Montréal (UQAM)</span>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-entry__header">
+              <span class="cv-entry__title" data-fr="Baccalauréat série D, Mathématiques et Sciences">Secondary School Diploma, Sciences (Series D)</span>
+              <span class="cv-entry__date" data-fr="Oct 2020">Oct 2020</span>
+            </div>
+            <span class="cv-entry__sub">Protestant College of Lomé-Tokoin, Togo</span>
+            <span class="cv-entry__note" data-fr="Équivalent au DEC au Québec">Equivalent to Québec CEGEP Diploma (DEC)</span>
+          </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="cv-section">
+          <h2 class="cv-section__title" data-fr="Projets">Projects</h2>
+
+          <div class="cv-entry">
+            <div class="cv-entry__header">
+              <span class="cv-entry__title" data-fr="Plateforme web sportive interactive Full-Stack">ER Recommender Web Application</span>
+              <span class="cv-entry__date">2026</span>
+            </div>
+            <span class="cv-entry__tech">React, Tailwind, Python, PostgreSQL</span>
+            <ul class="cv-entry__list">
+              <li data-fr="Développement une application web de recommandation complète utilisant React et Python, avec une base de données PostgreSQL pour stocker des instantanés horaires de la situation des urgences et retourner des résultats personnalisés.">Built a full-stack recommendation web application using React and Python, backed by a PostgreSQL database to store ER hourly situation snapshots and serve personalized results.</li>
+              <li data-fr="Intégration un modèle d'apprentissage automatique pour analyser les instantanés des urgences et générer des recommandations intelligentes et basées sur les données.">Integrated a machine learning model to analyze ER snapshots and generate intelligent, data-driven recommendations.</li>
+              <li data-fr="Renforcement des compétences en intégration de l'apprentissage automatique, en conception d'API RESTful et en connexion des pipelines de données à une interface utilisateur moderne">Strengthened skills in ML integration, RESTful API design, and connecting data pipelines to a modern frontend.</li>
+            </ul>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-entry__header">
+              <span class="cv-entry__title" data-fr="Application Web Rx-Apa Kinésithérapie">Rx-Apa Kinésitherapy Web Application</span>
+              <span class="cv-entry__date">2025</span>
+            </div>
+            <span class="cv-entry__tech">Angular, TypeScript, Spring Boot, MySQL</span>
+            <ul class="cv-entry__list">
+              <li data-fr="Développement du module d'administration permettant de créer, modifier et organiser les plans d'exercices de physiothérapie pour les patients.">Developed the admin module for creating, modifying, and organizing physiotherapy exercise plans for patients.</li>
+              <li data-fr="Application des pratiques Agile/Scrum — planification des sprints, réunions quotidiennes, rétrospectives.">Applied Agile/Scrum practices — sprint planning, daily standups, retrospectives.</li>
+              <li data-fr="Amélioration du travail d'équipe, de la documentation et de la méthodologie de conception logicielle.">Improved teamwork, documentation, and software design methodology.</li>
+            </ul>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-entry__header">
+              <span class="cv-entry__title" data-fr="Application web de messagerie interactive">Interactive Messaging Web Application</span>
+              <span class="cv-entry__date">2024</span>
+            </div>
+            <span class="cv-entry__tech">Angular, TypeScript, Spring Boot, Firestore, Docker, Cloud Run</span>
+            <ul class="cv-entry__list">
+              <li data-fr="Application de messagerie complète avec APIs backend et déploiement cloud">Complete messaging app with backend APIs, database integration, and cloud deployment</li>
+              <li data-fr="Implémentation de tests de charge et déploiement CI/CD">Implemented load testing and CI/CD-friendly deployment</li>
+            </ul>
+          </div>
+
+        </section>
+
+        <!-- Experience -->
+        <section class="cv-section">
+          <h2 class="cv-section__title" data-fr="Expérience">Experience</h2>
+          
+          <div class="cv-entry">
+            <div class="cv-entry__header">
+              <span class="cv-entry__title" data-fr="Commis d'entrepôt">Warehouse Clerk</span>
+              <span class="cv-entry__date">2022–2025</span>
+            </div>
+            <span class="cv-entry__sub">La Ronde – Six Flags, Montréal</span>
+            <ul class="cv-entry__list">
+              <li data-fr="Réception et préparation des commandes tout en veillant au respect des normes de qualité.">Received and assembled orders while ensuring quality standards.</li>
+              <li data-fr="Maintenance d'un environnement d'entrepôt sûr et organisé.">Maintained a safe and organized warehouse environment.</li>
+              <li data-fr="Participation à l'élaboration et à la révision des rapports d'inventaire.">Assisted in making and reviewing inventory reports.</li>
+            </ul>
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER (loaded dynamically) -->
+  <div data-component="footer"></div>
+
+  <!-- JS: Component loader → Shared → Page-specific -->
+  <script src="js/components/loader.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/pages/cv.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* ════════════════════════════════════════════
+   base.css — Reset, Variables & Typography
+   ════════════════════════════════════════════ */
+
+
+/* ── Reset ─────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ── Variables ─────────────────────────────── */
+
+:root {
+  --bg:        #e4e7ee;
+  --card:      #fffcf75b;
+  --ink:       #1A1714;
+  --ink-light: #4A4540;
+  --accent:    #C8522A;
+  --rule:      #D8D2C5;
+  --nav-h:     56px;
+
+  --font-serif: 'DM Serif Display', Georgia, serif;
+  --font-sans:  'DM Sans', system-ui, sans-serif;
+  --font-mono:  'DM Mono', 'Courier New', monospace;
+
+  --max-w: 1024px;
+}
+
+
+/* ── Base ──────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img { display: block; max-width: 100%; }
+ul  { list-style: none; }
+a   { color: inherit; }
+
+
+/* ── Typography ────────────────────────────── */
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* ── Utilities ─────────────────────────────── */
+
+/* Section max-width wrapper */
+.section-inner,
+.contact__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Section label (monospace tag above headings) */
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--bg);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+.section-label::after {
+  content: '';
+  display: block;
+  width: 44px;
+  height: 1px;
+  background: var(--bg);
+  opacity: 0.4;
+}
+/* Light variant (on dark background) */
+.section-label--light {
+  color: var(--bg);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 1.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1.5px solid var(--ink);
+  border-radius: 3px;
+  color: var(--ink);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+.btn:hover {
+  background: var(--ink);
+  color: var(--bg);
+}
+.btn--primary {
+  background: var(--ink);
+  color: var(--bg);
+}
+.btn--primary:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+
+/* ── Scroll Reveal ─────────────────────────── */
+
+/* Initial hidden state */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Visible state — added by JS via IntersectionObserver */
+.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jonathan Agba – Software Engineering Graduate. Portfolio & CV." />
+  <title>Jonathan Agba</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <!-- CSS: Base → Components → Page-specific -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages/home.css" />
+</head>
+<body>
+
+  <!-- NAV (loaded dynamically) -->
+  <div data-component="nav"></div>
+
+
+  <!-- ════════════════════════════════
+       HERO
+  ════════════════════════════════ -->
+  <section class="hero" id="home">
+
+    <div class="hero__ring hero__ring--outer" aria-hidden="true"></div>
+    <div class="hero__ring hero__ring--inner" aria-hidden="true"></div>
+
+    <div class="hero__content">
+
+      <div class="hero__grid">
+        <!-- Left column: main intro -->
+        <div class="hero__left">
+          <p class="hero__tag"
+             data-fr="Diplômé en Génie Logiciel · Montréal">
+            Software Engineering Graduate · Montréal
+          </p>
+
+          <h1 class="hero__name">
+            Jonathan <em class="hero__accent">Agba</em>
+          </h1>
+
+          <p class="hero__bio"
+             data-fr="Je conçois des logiciels soignés, des APIs backend aux interfaces web abouties. Diplômé du programme d'informatique et génie logiciel de l'UQAM (avril 2025), ma formation m'a permis de développer une base solide sur le full-stack, des bases de données relationnelles et APIs backend aux frameworks front-end et déploiements cloud. Intérêt prononcé pour la data et l'intelligence artificielle (apprentissage automatique) afin de transformer des données en solutions concrètes et exploitables. Je suis prêt à rejoindre des équipes qui accordent de l'importance à la qualité et au métier bien fait.">
+            I build thoughtful software, from backend APIs to polished web interfaces. Graduate of UQAM's Computer Science & Software Engineering program (April 2025), my studies gave me a solid base across the full-stack, from relational databases and backend APIs to front-end frameworks and cloud deployments. Strong interest in data and artificial intelligence (machine learning) to transform data into concrete and actionable solutions. I'm eager to contribute to teams that care about quality and craft.
+          </p>
+
+          <div class="hero__cta">
+            <a href="cv.html"
+               class="btn btn--primary"
+               data-fr="Mon CV">
+              My CV
+            </a>
+            <a href="projects.html"
+               class="btn"
+               data-fr="Mes projets">
+              See Projects
+            </a>
+            <a href="#contact"
+               class="btn"
+               data-fr="Me contacter">
+              Get in touch
+            </a>
+          </div>
+        </div>
+
+        <!-- Right column: about content -->
+        <div class="hero__about">
+          <div class="hero__interests">
+            <div class="interest-card">
+              <span class="interest-card__icon" aria-hidden="true">🌐</span>
+              <div>
+                <div class="interest-card__label" data-fr="Développement Web Full-Stack">Full-Stack Web Dev</div>
+                <div class="interest-card__desc" data-fr="Angular, React, Spring Boot, Node.js — fonctionnalités de bout en bout.">Angular, React, Spring Boot, Node.js — end-to-end features.</div>
+              </div>
+            </div>
+
+            <div class="interest-card">
+              <span class="interest-card__icon" aria-hidden="true">☁️</span>
+              <div>
+                <div class="interest-card__label" data-fr="Cloud & DevOps">Cloud & DevOps</div>
+                <div class="interest-card__desc" data-fr="Docker, Firebase, Azure — déploiements fiables à grande échelle.">Docker, Firebase, Azure — deploying reliably at scale.</div>
+              </div>
+            </div>
+
+            <div class="interest-card">
+              <span class="interest-card__icon" aria-hidden="true">🤖</span>
+              <div>
+                <div class="interest-card__label" data-fr="Apprentissage Automatique">Machine Learning</div>
+                <div class="interest-card__desc" data-fr="Applications ML pratiques — développement d'un système de recommandation.">Practical ML apps — currently building a recommender system.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════
+       CONTACT
+  ════════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="contact__inner">
+
+      <p class="section-label section-label--light reveal"
+         data-fr="Me contacter">
+        Get in touch
+      </p>
+
+      <h2 class="contact__headline reveal">
+        <span data-fr="Construisons">Let's build</span><br>
+        <em class="contact__headline-em"
+            data-fr="quelque chose ensemble!">
+          something great!
+        </em>
+      </h2>
+
+      <p class="contact__sub reveal"
+         data-fr="Je suis activement à la recherche d'opportunités — postes junior, stages ou collaborations. N'hésitez pas à me contacter.">
+        I'm actively looking for opportunities — junior developer roles, internships, or project collaborations. Feel free to reach out.
+      </p>
+
+      <div class="contact__links reveal">
+        <a href="mailto:contact@jonathan-agba.com" class="contact__link">
+          <span class="contact__link-icon">✉</span>
+          contact@jonathan-agba.com
+        </a>
+        <a href="https://linkedin.com/in/jonathan-agba-lidaw" target="_blank" rel="noopener noreferrer" class="contact__link">
+          <span class="contact__link-icon">in</span>
+          linkedin.com/in/jonathan-agba-lidaw
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER (loaded dynamically) -->
+  <div data-component="footer"></div>
+
+
+  <!-- JS: Component loader → Shared → Page-specific -->
+  <script src="js/components/loader.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/pages/home.js"></script>
+</body>
+</html>

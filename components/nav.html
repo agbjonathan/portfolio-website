@@ -1,0 +1,36 @@
+<!-- Navigation Component -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+
+    <a href="index.html" class="nav__logo">JA</a>
+
+    <div class="nav__right">
+      <ul class="nav__links">
+        <li><a href="projects.html" class="nav__link" data-fr="Projets">Projects</a></li>
+        <li><a href="cv.html"       class="nav__link" data-fr="CV">CV</a></li>
+      </ul>
+
+      <div class="nav__lang">
+        <button class="nav__lang-btn nav__lang-btn--active" data-lang="en">EN</button>
+        <button class="nav__lang-btn"                       data-lang="fr">FR</button>
+      </div>
+
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="nav__mobile" aria-hidden="true">
+    <a href="projects.html" class="nav__mobile-link" data-fr="Projets">Projects</a>
+    <a href="cv.html"       class="nav__mobile-link" data-fr="CV">CV</a>
+    <div class="nav__mobile-lang">
+      <button class="nav__lang-btn nav__lang-btn--active" data-lang="en">EN</button>
+      <button class="nav__lang-btn"                       data-lang="fr">FR</button>
+    </div>
+  </div>
+</nav>

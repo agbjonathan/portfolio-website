@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jonathan Agba – Projects" />
+  <title>Projects – Jonathan Agba</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <!-- CSS: Base → Components → Page-specific -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages/projects.css" />
+</head>
+<body>
+
+  <!-- NAV (loaded dynamically) -->
+  <div data-component="nav" data-nav-scrolled="true"></div>
+
+  <!-- ════════════════════════════════
+       PROJECTS PAGE
+  ════════════════════════════════ -->
+  <section class="projects">
+    <div class="projects__container">
+
+      <div class="projects__header">
+        <div class="projects__title-link" id="projects">
+          <h1 class="projects__title" data-fr="Projets">Projects</h1>
+        </div>
+        <a href="https://github.com/agbjonathan" target="_blank" rel="noopener" class="projects__github">
+          <svg class="projects__github-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span data-fr="Voir mon GitHub">View my GitHub</span>
+        </a>
+      </div>
+
+      <div class="projects__grid">
+
+        <!-- Project Card 1 -->
+        <div class="project-card project-card--coming-soon">
+          <div class="project-card__header">
+            <h2 class="project-card__title" data-fr="Application Web ER Recommender">ER Recommender Web Application</h2>
+            <span class="project-card__year">2026</span>
+          </div>
+          <p class="project-card__tech">React, Tailwind, Python, PostgreSQL</p>
+          <p class="project-card__desc" data-fr="Application web de recommandation complète utilisant l'apprentissage automatique pour analyser les données des urgences et fournir des résultats personnalisés en temps réel.">
+            Full-stack recommendation web application using machine learning to analyze ER data and deliver personalized, real-time results.
+          </p>
+          <span class="project-card__cta" data-fr="Bientôt disponible">Coming Soon</span>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card project-card--coming-soon">
+          <div class="project-card__header">
+            <h2 class="project-card__title" data-fr="Application Web de Messagerie Interactive">Interactive Messaging Web Application</h2>
+            <span class="project-card__year">2024</span>
+          </div>
+          <p class="project-card__tech">Angular, TypeScript, Spring Boot, Firestore, Docker, Cloud Run</p>
+          <p class="project-card__desc" data-fr="Application de messagerie complète avec APIs backend, intégration de base de données et déploiement cloud avec tests de charge et CI/CD.">
+            Complete messaging app with backend APIs, database integration, and cloud deployment with load testing and CI/CD.
+          </p>
+          <span class="project-card__cta" data-fr="Bientôt disponible">Coming Soon</span>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project-card project-card--coming-soon">
+          <div class="project-card__header">
+            <h2 class="project-card__title" data-fr="Application Web Rx-Apa Kinésithérapie">Rx-Apa Kinésitherapy Web Application</h2>
+            <span class="project-card__year">2025</span>
+          </div>
+          <p class="project-card__tech">Angular, TypeScript, Spring Boot, MySQL</p>
+          <p class="project-card__desc" data-fr="Module d'administration pour créer, modifier et organiser les plans d'exercices de physiothérapie, développé avec méthodologie Agile/Scrum.">
+            Admin module for creating, modifying, and organizing physiotherapy exercise plans, built using Agile/Scrum methodology.
+          </p>
+          <span class="project-card__cta" data-fr="Bientôt disponible">Coming Soon</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER (loaded dynamically) -->
+  <div data-component="footer"></div>
+
+  <!-- JS: Component loader → Shared -->
+  <script src="js/components/loader.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

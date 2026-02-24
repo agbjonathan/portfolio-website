@@ -1,0 +1,368 @@
+/* ════════════════════════════════════════════
+   cv.css — CV Page Specific Styles
+   ════════════════════════════════════════════ */
+
+/* ── CV-specific Variables ─────────────────── */
+
+:root {
+  --cv-bg: #ffffff;
+  --cv-ink: #1A1714;
+  --cv-ink-light: #4A4540;
+  --cv-accent: #C8522A;
+  --cv-rule: #e0dcd5;
+  --cv-sidebar-bg: #f7f5f2;
+}
+
+
+/* ── Floating Download Button ──────────────── */
+
+.cv-download {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--cv-ink);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.cv-download:hover {
+  background: var(--cv-accent);
+  transform: translateY(-2px);
+}
+
+.cv-download__icon {
+  font-size: 1rem;
+}
+
+
+/* ── CV Page Container ─────────────────────── */
+
+.cv-page {
+  position: absolute;
+  top: var(--nav-h);
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width: min(calc((100vh - var(--nav-h) - 2rem) * 0.707), 850px);
+  max-width: calc(100vw - 2rem);
+  
+  padding: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  
+  background: var(--cv-bg);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  border-radius: 4px;
+  
+  font-size: clamp(11px, 1.4vw, 14px);
+  line-height: 1.5;
+}
+
+
+/* ── Header ────────────────────────────────── */
+
+.cv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 0.8em;
+  border-bottom: 2px solid var(--cv-accent);
+  margin-bottom: 1em;
+}
+
+.cv-header__name {
+  font-family: var(--font-serif);
+  font-size: 2.2em;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--cv-ink);
+  margin-bottom: 0.1em;
+}
+
+.cv-header__title {
+  font-family: var(--font-mono);
+  font-size: 0.75em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cv-accent);
+}
+
+.cv-header__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2em;
+  font-size: 0.85em;
+  color: var(--cv-ink-light);
+}
+
+.cv-header__contact a {
+  color: var(--cv-ink-light);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.cv-header__contact a:hover {
+  color: var(--cv-accent);
+}
+
+
+/* ── Body Layout ───────────────────────────── */
+
+.cv-body {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.75em;
+}
+
+
+/* ── Sidebar ───────────────────────────────── */
+
+.cv-sidebar {
+  background: var(--cv-sidebar-bg);
+  padding: 0.8em;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.cv-sidebar .cv-section {
+  margin-bottom: 1em;
+}
+.cv-sidebar .cv-section:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ── Sections ──────────────────────────────── */
+
+.cv-section {
+  margin-bottom: 0.9em;
+}
+
+.cv-section__title {
+  font-family: var(--font-mono);
+  font-size: 0.7em;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cv-accent);
+  margin-bottom: 0.5em;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid var(--cv-rule);
+}
+
+
+/* ── Skills ────────────────────────────────── */
+
+.cv-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.cv-skill {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05em;
+}
+
+.cv-skill__label {
+  font-size: 0.85em;
+  font-weight: 500;
+  color: var(--cv-ink);
+}
+
+.cv-skill__value {
+  font-size: 0.8em;
+  color: var(--cv-ink-light);
+  line-height: 1.35;
+}
+
+
+/* ── List ──────────────────────────────────── */
+
+.cv-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+.cv-list li {
+  font-size: 0.85em;
+  color: var(--cv-ink-light);
+  padding-left: 0.8em;
+  position: relative;
+  line-height: 1.4;
+}
+
+.cv-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--cv-accent);
+}
+
+
+/* ── Main Content ──────────────────────────── */
+
+.cv-main .cv-section {
+  margin-bottom: 0.9em;
+}
+
+
+/* ── Profile ───────────────────────────────── */
+
+.cv-profile {
+  font-size: 0.9em;
+  line-height: 1.55;
+  color: var(--cv-ink-light);
+}
+
+
+/* ── Entry (Education, Projects, Experience) ─ */
+
+.cv-entry {
+  margin-bottom: 0.7em;
+}
+.cv-entry:last-child {
+  margin-bottom: 0;
+}
+
+.cv-entry__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5em;
+}
+
+.cv-entry__title {
+  font-size: 0.95em;
+  font-weight: 500;
+  color: var(--cv-ink);
+}
+
+.cv-entry__date {
+  font-family: var(--font-mono);
+  font-size: 0.7em;
+  color: var(--cv-ink-light);
+  white-space: nowrap;
+}
+
+.cv-entry__sub {
+  display: block;
+  font-size: 0.85em;
+  color: var(--cv-ink-light);
+  margin-top: 0.1em;
+}
+
+.cv-entry__note {
+  display: block;
+  font-size: 0.75em;
+  font-style: italic;
+  color: var(--cv-ink-light);
+  margin-top: 0.1em;
+}
+
+.cv-entry__tech {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7em;
+  color: var(--cv-accent);
+  margin-top: 0.2em;
+  margin-bottom: 0.3em;
+}
+
+.cv-entry__list {
+  margin-top: 0.25em;
+  padding-left: 0;
+}
+
+.cv-entry__list li {
+  font-size: 0.85em;
+  color: var(--cv-ink-light);
+  line-height: 1.4;
+  position: relative;
+  padding-left: 1em;
+  margin-bottom: 0.15em;
+}
+
+.cv-entry__list li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--cv-accent);
+}
+
+.cv-entry__list--compact li {
+  margin-bottom: 0.1em;
+}
+
+
+/* ── Responsive ────────────────────────────── */
+
+@media screen and (max-width: 800px) {
+  .cv-page {
+    width: calc(100vw - 2rem);
+    padding: 1.5rem;
+    font-size: clamp(11px, 2.5vw, 13px);
+  }
+
+  .cv-body {
+    grid-template-columns: 1fr 1.8fr;
+    gap: 1.25em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cv-page {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    margin: calc(var(--nav-h) + 0.5rem) 0 2rem;
+    padding: 1.25rem;
+    border-radius: 0;
+    font-size: 12px;
+  }
+
+  .cv-body {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+
+  .cv-sidebar {
+    order: 2;
+  }
+
+  .cv-main {
+    order: 1;
+  }
+
+  .cv-header {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .cv-header__contact {
+    align-items: flex-start;
+  }
+
+  .cv-download__text {
+    display: none;
+  }
+}
