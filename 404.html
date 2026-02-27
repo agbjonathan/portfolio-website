@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Page not found – Jonathan Agba" />
+  <title>404 – Jonathan Agba</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/pages/404.css" />
+</head>
+<body>
+
+  <!-- NAV (loaded dynamically) -->
+  <div data-component="nav"></div>
+
+  <!-- ════════════════════════════════
+       404 SECTION
+  ════════════════════════════════ -->
+  <main class="error-page">
+
+    <div class="error-page__ring error-page__ring--outer" aria-hidden="true"></div>
+    <div class="error-page__ring error-page__ring--inner" aria-hidden="true"></div>
+
+    <div class="error-page__content">
+
+      <p class="error-page__code">Error · Page not found</p>
+
+      <div class="error-page__number reveal">4<em>0</em>4</div>
+
+      <h1 class="error-page__heading reveal">
+        Nothing to see here.
+      </h1>
+
+      <p class="error-page__message reveal">
+        The page you're looking for doesn't exist or may have been moved.<br />
+        Let's get you back on track.
+      </p>
+
+      <div class="error-page__actions reveal">
+        <a href="index.html" class="btn btn--primary">← Back to Home</a>
+        <a href="projects.html" class="btn">See Projects</a>
+        <a href="cv.html" class="btn">My CV</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER (loaded dynamically) -->
+  <div data-component="footer"></div>
+
+  <!-- JS -->
+  <script src="js/components/loader.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Trigger reveal animations
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('reveal--visible');
+          }, i * 100);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
