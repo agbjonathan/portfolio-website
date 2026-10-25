@@ -51,16 +51,26 @@
 
 /* ── CV Page Container ─────────────────────── */
 
+/*
+  Desktop / tablet: the page is a true A4 sheet (210 × 297) scaled to fit the
+  window height, so the whole page is always visible. Everything inside is
+  sized in em, and font-size is derived from the page width (A4 width ÷ 59.5
+  = 10pt at 100% scale), so the layout is identical to the print version at
+  any screen size, from a laptop to a 34" ultrawide.
+*/
 .cv-page {
+  --cv-w: min(calc((100vh - var(--nav-h) - 2rem) * 0.7071), calc(100vw - 2rem));
+
   position: absolute;
   top: var(--nav-h);
   left: 50%;
   transform: translateX(-50%);
-  
-  width: min(calc((100vh - var(--nav-h) - 2rem) * 0.707), 850px);
-  max-width: calc(100vw - 2rem);
-  
-  padding: 2.5rem;
+  box-sizing: border-box;
+
+  width: var(--cv-w);
+  aspect-ratio: 210 / 297;
+
+  padding: 2.83em 3.4em;
   margin-top: 1rem;
   margin-bottom: 2rem;
   
@@ -70,8 +80,15 @@
   
   font-family: var(--cv-font);
   color: var(--cv-ink);
-  font-size: clamp(11px, 1.4vw, 14px);
-  line-height: 1.4;
+  font-size: calc(var(--cv-w) / 59.5);
+  line-height: 1.3;
+}
+
+/* Mobile browsers: use the dynamic viewport height so the toolbar doesn't clip the page */
+@supports (height: 100dvh) {
+  .cv-page {
+    --cv-w: min(calc((100dvh - var(--nav-h) - 2rem) * 0.7071), calc(100vw - 2rem));
+  }
 }
 
 
@@ -80,13 +97,13 @@
 .cv-header {
   display: block;
   text-align: center;
-  padding-bottom: 0;
+  padding-bottom: 0.2em;
   margin-bottom: 0.4em;
 }
 
 .cv-header__name {
   font-family: var(--cv-font);
-  font-size: 2.1em;
+  font-size: 2em;
   font-weight: 700;
   letter-spacing: 0.02em;
   color: var(--cv-ink);
@@ -95,8 +112,10 @@
 
 .cv-header__title {
   font-family: var(--cv-font);
-  font-size: 0.95em;
+  font-size: 1.05em;
+  font-style: italic;
   color: var(--cv-ink);
+  margin-bottom: 0.2em;
 }
 
 .cv-header__contact {
@@ -141,7 +160,7 @@
 }
 
 .cv-sidebar .cv-section {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.6em;
 }
 .cv-sidebar .cv-section:last-child {
   margin-bottom: 0;
@@ -151,9 +170,10 @@
 /* ── Sections ──────────────────────────────── */
 
 .cv-section {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.6em;
 }
 
+.cv-section--profile        { order: 0; }
 .cv-section--education      { order: 1; }
 .cv-section--skills         { order: 2; }
 .cv-section--certifications { order: 3; }
@@ -163,12 +183,12 @@
 
 .cv-section__title {
   font-family: var(--cv-font);
-  font-size: 1.1em;
+  font-size: 1.05em;
   font-weight: 700;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--cv-ink);
-  margin-bottom: 0.35em;
+  margin-bottom: 0.3em;
   padding-bottom: 0.1em;
   border-bottom: 1px solid var(--cv-rule);
 }
@@ -179,7 +199,7 @@
 .cv-skills {
   display: flex;
   flex-direction: column;
-  gap: 0.1em;
+  gap: 0.15em;
 }
 
 .cv-skill {
@@ -210,15 +230,15 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 0.1em 1.6em;
+  gap: 0.1em 1.4em;
 }
 
 .cv-list li {
   font-size: 0.95em;
   color: var(--cv-ink);
-  padding-left: 0.9em;
+  padding-left: 0.8em;
   position: relative;
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 .cv-list li::before {
@@ -232,7 +252,7 @@
 /* ── Main Content ──────────────────────────── */
 
 .cv-main .cv-section {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.6em;
 }
 
 
@@ -240,7 +260,7 @@
 
 .cv-profile {
   font-size: 0.95em;
-  line-height: 1.45;
+  line-height: 1.4;
   color: var(--cv-ink);
 }
 
@@ -248,7 +268,7 @@
 /* ── Entry (Education, Projects, Experience) ─ */
 
 .cv-entry {
-  margin-bottom: 0.45em;
+  margin-bottom: 0.4em;
 }
 .cv-entry:last-child {
   margin-bottom: 0;
@@ -266,7 +286,7 @@
 }
 
 .cv-entry__title {
-  font-size: 0.98em;
+  font-size: 1em;
   font-weight: 700;
   color: var(--cv-ink);
 }
@@ -315,7 +335,7 @@
 .cv-entry__list li {
   font-size: 0.95em;
   color: var(--cv-ink);
-  line-height: 1.35;
+  line-height: 1.3;
   position: relative;
   padding-left: 1.6em;
   margin-bottom: 0.1em;
@@ -335,15 +355,12 @@
 
 /* ── Responsive ────────────────────────────── */
 
-@media screen and (max-width: 800px) {
-  .cv-page {
-    width: calc(100vw - 2rem);
-    padding: 1.5rem;
-    font-size: clamp(11px, 2.5vw, 13px);
-  }
-}
-
-@media screen and (max-width: 600px) {
+/*
+  Reading mode (phones, and phones turned landscape): a scaled A4 sheet would
+  be too small to read, so the page fills the full screen width at a fixed,
+  readable size and the content scrolls vertically.
+*/
+@media screen and (max-width: 600px), screen and (max-height: 520px) {
   .cv-page {
     position: relative;
     top: auto;
@@ -351,12 +368,16 @@
     transform: none;
     width: 100%;
     max-width: 100%;
+    aspect-ratio: auto;
     margin: calc(var(--nav-h) + 0.5rem) 0 2rem;
     padding: 1.25rem;
     border-radius: 0;
-    font-size: 12px;
+    font-size: 13px;
+    line-height: 1.4;
   }
+}
 
+@media screen and (max-width: 600px) {
   .cv-header__contact {
     flex-direction: column;
     align-items: center;
