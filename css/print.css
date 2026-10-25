@@ -67,84 +67,79 @@
     height: auto;
     max-width: none;
     margin: 0;
-    padding: 8mm 10mm;
+    padding: 10mm 12mm;
     box-shadow: none;
     border-radius: 0;
-    font-size: 9.5pt;
+    font-size: 10pt;
+    line-height: 1.3;
     box-sizing: border-box;
   }
 
   .cv-header {
-    padding-bottom: 5pt;
-    margin-bottom: 8pt;
+    padding-bottom: 2pt;
+    margin-bottom: 4pt;
   }
 
   .cv-header__name {
-    font-size: 18pt;
+    font-size: 20pt;
   }
 
   .cv-header__title {
-    font-size: 8.5pt;
+    font-size: 9.5pt;
   }
 
   .cv-header__contact {
-    font-size: 8.5pt;
-    gap: 2pt;
+    font-size: 9.5pt;
+    gap: 2pt 6pt;
   }
 
   .cv-body {
-    grid-template-columns: 150pt 1fr;
-    gap: 12pt;
     height: auto;
   }
 
-  .cv-sidebar {
-    padding: 5pt;
-  }
-
   .cv-section {
-    margin-bottom: 5pt;
+    margin-bottom: 6pt;
   }
 
   .cv-sidebar .cv-section {
-    margin-bottom: 8pt;
+    margin-bottom: 6pt;
   }
 
   .cv-section__title {
-    font-size: 7.5pt;
-    margin-bottom: 4pt;
-    padding-bottom: 2pt;
+    font-size: 10.5pt;
+    margin-bottom: 3pt;
+    padding-bottom: 1pt;
   }
 
   .cv-skills {
-    gap: 3pt;
+    gap: 1.5pt;
   }
 
   .cv-skill__label {
-    font-size: 8.5pt;
+    font-size: 9.5pt;
   }
 
   .cv-skill__value {
-    font-size: 8pt;
+    font-size: 9.5pt;
   }
 
   .cv-list {
-    gap: 2pt;
+    gap: 1pt 14pt;
   }
 
   .cv-list li {
-    font-size: 8.5pt;
-    padding-left: 6pt;
+    font-size: 9.5pt;
+    padding-left: 8pt;
     line-height: 1.35;
   }
 
   .cv-profile {
-    font-size: 9pt;
+    font-size: 9.5pt;
     line-height: 1.4;
   }
 
   .cv-main .cv-section {
-    margin-bottom: 5pt;
+    margin-bottom: 6pt;
   }
 
   .cv-entry {
@@ -152,35 +147,38 @@
   }
 
   .cv-entry__title {
+    font-size: 10pt;
+  }
+
+  .cv-entry__date,
+  .cv-entry__place {
     font-size: 9.5pt;
   }
 
-  .cv-entry__date {
-    font-size: 8pt;
-  }
-
   .cv-entry__sub {
-    font-size: 8.5pt;
+    font-size: 9.5pt;
   }
 
   .cv-entry__note {
-    font-size: 7.5pt;
+    font-size: 8.5pt;
   }
 
   .cv-entry__tech {
-    font-size: 8pt;
-    margin-top: 1pt;
-    margin-bottom: 2pt;
+    font-size: 9.5pt;
   }
 
   .cv-entry__list {
-    margin-top: 2pt;
+    margin-top: 1pt;
   }
 
   .cv-entry__list li {
-    font-size: 8.5pt;
-    padding-left: 7pt;
+    font-size: 9.5pt;
+    padding-left: 16pt;
     margin-bottom: 1pt;
-    line-height: 1.35;
+    line-height: 1.3;
+  }
+
+  .cv-entry__list li::before {
+    left: 6pt;
   }
 }
