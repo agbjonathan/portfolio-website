@@ -33,12 +33,11 @@
     <header class="cv-header">
       <div class="cv-header__main">
         <h1 class="cv-header__name">JONATHAN AGBA</h1>
-        <p class="cv-header__title" data-fr="Diplômé en Génie Logiciel">Software Engineering Graduate</p>
       </div>
       <div class="cv-header__contact">
+        <span>Montréal, QC</span>
         <a href="mailto:contact@jonathan-agba.com">contact@jonathan-agba.com</a>
         <a href="https://linkedin.com/in/jonathan-agba-lidaw" target="_blank" rel="noopener">linkedin.com/in/jonathan-agba-lidaw</a>
-        <span>Montréal, Québec</span>
       </div>
     </header>
 
@@ -49,35 +48,50 @@
       <aside class="cv-sidebar">
 
         <!-- Skills -->
-        <section class="cv-section">
-          <h2 class="cv-section__title" data-fr="Compétences">Skills</h2>
+        <section class="cv-section cv-section--skills">
+          <h2 class="cv-section__title" data-fr="Compétences techniques">Technical Skills</h2>
           
           <div class="cv-skills">
             <div class="cv-skill">
-              <span class="cv-skill__label" data-fr="Langages">Programming</span>
-              <span class="cv-skill__value">C, C++, Java, JavaScript, Python, TypeScript</span>
+              <span class="cv-skill__label" data-fr="Langages">Languages</span>
+              <span class="cv-skill__value">C, C++, Java, JavaScript, TypeScript, Python, SQL</span>
             </div>
             <div class="cv-skill">
               <span class="cv-skill__label">Frameworks</span>
-              <span class="cv-skill__value">Angular, React, Spring Boot, FastAPI</span>
+              <span class="cv-skill__value">React, Angular, Spring Boot, FastAPI</span>
             </div>
             <div class="cv-skill">
               <span class="cv-skill__label" data-fr="Bases de données">Databases</span>
-              <span class="cv-skill__value">SQL Server, MySQL, Firestore, PostgreSQL</span>
+              <span class="cv-skill__value">PostgreSQL, MySQL, SQL Server, Firestore</span>
             </div>
             <div class="cv-skill">
-              <span class="cv-skill__label">Cloud & DevOps</span>
-              <span class="cv-skill__value">Docker, Firebase, Cloud Run, GitHub, GitLab, Azure</span>
+              <span class="cv-skill__label" data-fr="Cloud et outils">Cloud & Tools</span>
+              <span class="cv-skill__value">Docker, Azure, Firebase, Cloud Run, Git, GitHub, GitLab, CI/CD, Agile / Scrum</span>
             </div>
-            <div class="cv-skill">
-              <span class="cv-skill__label" data-fr="Méthodologies">Methodologies</span>
-              <span class="cv-skill__value">Agile / Scrum</span>
+          </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="cv-section cv-section--certifications">
+          <h2 class="cv-section__title">Certifications</h2>
+
+          <div class="cv-entry">
+            <div class="cv-entry__header">
+              <span class="cv-entry__title">Microsoft Azure Fundamentals (AZ-900)</span>
+              <span class="cv-entry__date" data-fr="Examen prévu en déc. 2026">Exam scheduled Dec 2026</span>
+            </div>
+          </div>
+
+          <div class="cv-entry">
+            <div class="cv-entry__header">
+              <span class="cv-entry__title" data-fr="Certificat professionnel IBM Data Analyst – Coursera">IBM Data Analyst Professional Certificate – Coursera</span>
+              <span class="cv-entry__date" data-fr="En cours (3 cours sur 11 complétés)">In progress (3 of 11 courses completed)</span>
             </div>
           </div>
         </section>
 
         <!-- Languages -->
-        <section class="cv-section">
+        <section class="cv-section cv-section--languages">
           <h2 class="cv-section__title" data-fr="Langues">Languages</h2>
           <ul class="cv-list">
             <li data-fr="Français (langue maternelle)">French (native)</li>
@@ -86,16 +100,6 @@
         </section>
 
         <!-- Strengths -->
-        <section class="cv-section">
-          <h2 class="cv-section__title" data-fr="Points forts">Strengths</h2>
-          <ul class="cv-list">
-            <li data-fr="Esprit d'équipe et communication">Strong teamwork & communication</li>
-            <li data-fr="Apprentissage rapide, adaptable">Quick learner, adaptable, autonomous</li>
-            <li data-fr="Analyse et résolution de problèmes">Problem-solving & analytical thinking</li>
-            <li data-fr="Organisé, rigoureux et fiable">Organized, structured, and reliable</li>
-            <li data-fr="Autonome et proactif">Initiative-driven and proactive</li>
-          </ul>
-        </section>
 
       </aside>
 
@@ -103,93 +107,99 @@
       <main class="cv-main">
 
         <!-- Profile -->
-        <section class="cv-section">
-          <h2 class="cv-section__title">Profile</h2>
-          <p class="cv-profile" data-fr="Diplômé en génie logiciel proactif et soucieux du détail, avec une expérience pratique en développement web, en intégration backend et en conception de bases de données. Fortes capacités d'analyse, excellente communication et aptitude prouvée à apprendre rapidement. Reconnu comme un collaborateur avec un esprit de résolution de problèmes et passionné par la data et l'intelligence artificielle/apprentissage automatique, avec un intérêt marqué pour leur application à la résolution de problèmes concrets. À la recherche d'une opportunité pour contribuer à une équipe innovante.">
-            Detail-oriented and proactive Software Engineering graduate with hands-on experience in web and mobile development, backend integration, and database design. Strong analytical abilities, excellent communication skills, and a proven capacity to learn quickly and adapt to new technologies. Recognized as a collaborative team player with a problem-solving mindset and passionate about data and artificial intelligence (machine learning), with a strong interest in their application to solving real-world problems. Seeking an opportunity to contribute to a forward-thinking organization.
-          </p>
-        </section>
 
         <!-- Education -->
-        <section class="cv-section">
+        <section class="cv-section cv-section--education">
           <h2 class="cv-section__title" data-fr="Formation">Education</h2>
           
           <div class="cv-entry">
             <div class="cv-entry__header">
-              <span class="cv-entry__title" data-fr="Baccalauréat en Informatique et Génie logiciel">Bachelor of Computer Science and Software Engineering</span>
+              <span class="cv-entry__title">Université du Québec à Montréal (UQAM)</span>
+              <span class="cv-entry__place">Montréal, QC</span>
+            </div>
+            <div class="cv-entry__header">
+              <span class="cv-entry__sub" data-fr="Baccalauréat en informatique et génie logiciel">B.Sc. in Computer Science and Software Engineering</span>
               <span class="cv-entry__date" data-fr="Décembre 2025">Dec 2025</span>
             </div>
-            <span class="cv-entry__sub">Université du Québec à Montréal (UQAM)</span>
           </div>
 
-          <div class="cv-entry">
+          <!-- <div class="cv-entry">
             <div class="cv-entry__header">
-              <span class="cv-entry__title" data-fr="Baccalauréat série D, Mathématiques et Sciences">Secondary School Diploma, Sciences (Series D)</span>
+              <span class="cv-entry__title">Protestant College of Lomé-Tokoin</span>
+              <span class="cv-entry__place">Lomé, Togo</span>
+            </div>
+            <div class="cv-entry__header">
+              <span class="cv-entry__sub" data-fr="Baccalauréat série D, Mathématiques et Sciences – équivalent au DEC au Québec">Secondary School Diploma, Sciences (Series D) – equivalent to Québec DEC</span>
               <span class="cv-entry__date" data-fr="Oct 2020">Oct 2020</span>
             </div>
-            <span class="cv-entry__sub">Protestant College of Lomé-Tokoin, Togo</span>
-            <span class="cv-entry__note" data-fr="Équivalent au DEC au Québec">Equivalent to Québec CEGEP Diploma (DEC)</span>
-          </div>
+          </div> -->
         </section>
 
         <!-- Projects -->
-        <section class="cv-section">
+        <section class="cv-section cv-section--projects">
           <h2 class="cv-section__title" data-fr="Projets">Projects</h2>
 
           <div class="cv-entry">
             <div class="cv-entry__header">
-              <span class="cv-entry__title" data-fr="Application Web de recommandation d'urgences">ER Recommender Web Application</span>
+              <span class="cv-entry__heading">
+                <span class="cv-entry__title" data-fr="Application Web de recommandation d'urgences">ER Recommender Web Application</span>
+                <span class="cv-entry__tech">React, FastAPI, PostgreSQL, Docker, Azure</span>
+              </span>
               <span class="cv-entry__date">2026</span>
             </div>
-            <span class="cv-entry__tech">React, FastAPI, PostgreSQL, Docker, Azure</span>
             <ul class="cv-entry__list">
-              <li data-fr="Application web de recommandation avec React, FastApi et PostgreSQL déployée sur Azure pour analyser les données des urgences.">Built a full-stack recommendation web application using React and FastAPI, backed by a PostgreSQL database and deployed on Azure to analyze ER data and deliver personalized, real-time results.</li>
-              <li data-fr="Intégration d'un modèle ML pour générer des recommandations basées sur les données.">Integrated a machine learning model to analyze ER snapshots and generate intelligent, data-driven recommendations.</li>
-              <li data-fr="Compétences renforcées en API RESTful et pipelines de données.">Strengthened skills in ML integration, RESTful API design, and connecting data pipelines to a modern frontend.</li>
+              <li data-fr="Conception et déploiement sur Azure d'une application web full-stack qui analyse les données des urgences et fournit des recommandations personnalisées en temps réel.">Built and deployed a full-stack web app on Azure that analyzes emergency-room data and delivers personalized, real-time recommendations.</li>
+              <li data-fr="Intégration d'un modèle d'apprentissage automatique pour analyser des instantanés des urgences, exposé via des endpoints RESTful FastAPI connectés à un frontend React.">Integrated a machine learning model to analyze ER snapshots, exposed through RESTful FastAPI endpoints connected to a React frontend.</li>
+              <li data-fr="Conception du schéma PostgreSQL et du pipeline de données alimentant le modèle et l'interface.">Designed the PostgreSQL schema and data pipeline feeding the model and the UI.</li>
             </ul>
           </div>
 
           <div class="cv-entry">
             <div class="cv-entry__header">
-              <span class="cv-entry__title" data-fr="Application Web Rx-Apa Kinésithérapie">Rx-Apa Kinésitherapy Web Application</span>
+              <span class="cv-entry__heading">
+                <span class="cv-entry__title" data-fr="Application Web Rx-Apa Kinésithérapie">Rx-Apa Kinésitherapy Web Application</span>
+                <span class="cv-entry__tech">Angular, TypeScript, Spring Boot, MySQL</span>
+              </span>
               <span class="cv-entry__date">2025</span>
             </div>
-            <span class="cv-entry__tech">Angular, TypeScript, Spring Boot, MySQL</span>
             <ul class="cv-entry__list">
               <li data-fr="Développement du module d'administration permettant de créer, modifier et organiser les plans d'exercices de physiothérapie pour les patients.">Developed the admin module for creating, modifying, and organizing physiotherapy exercise plans for patients.</li>
-              <li data-fr="Application des pratiques Agile/Scrum — planification des sprints, réunions quotidiennes, rétrospectives.">Applied Agile/Scrum practices — sprint planning, daily standups, retrospectives.</li>
-              <li data-fr="Amélioration du travail d'équipe, de la documentation et de la méthodologie de conception logicielle.">Improved teamwork, documentation, and software design methodology.</li>
+              <li data-fr="Collaboration au sein d'une équipe Agile/Scrum (planification des sprints, réunions quotidiennes, rétrospectives) et documentation des choix de conception logicielle.">Collaborated in an Agile/Scrum team (sprint planning, daily standups, retrospectives) and documented software design decisions.</li>
             </ul>
           </div>
 
           <div class="cv-entry">
             <div class="cv-entry__header">
-              <span class="cv-entry__title" data-fr="Application web de messagerie interactive">Interactive Messaging Web Application</span>
+              <span class="cv-entry__heading">
+                <span class="cv-entry__title" data-fr="Application web de messagerie interactive">Interactive Messaging Web Application</span>
+                <span class="cv-entry__tech">Angular, TypeScript, Spring Boot, Firestore, Docker, Cloud Run</span>
+              </span>
               <span class="cv-entry__date">2024</span>
             </div>
-            <span class="cv-entry__tech">Angular, TypeScript, Spring Boot, Firestore, Docker, Cloud Run</span>
             <ul class="cv-entry__list">
-              <li data-fr="Application de messagerie complète avec APIs backend et déploiement cloud">Complete messaging app with backend APIs, database integration, and cloud deployment</li>
-              <li data-fr="Implémentation de tests de charge et déploiement CI/CD">Implemented load testing and CI/CD-friendly deployment</li>
+              <li data-fr="Conception d'une application de messagerie complète avec des APIs backend Spring Boot et l'intégration de Firestore.">Built a complete messaging app with Spring Boot backend APIs and Firestore integration.</li>
+              <li data-fr="Conteneurisation avec Docker et déploiement sur Google Cloud Run ; mise en place de tests de charge et d'un déploiement compatible CI/CD.">Containerized with Docker and deployed on Google Cloud Run; implemented load testing and CI/CD-friendly deployment.</li>
             </ul>
           </div>
 
         </section>
 
         <!-- Experience -->
-        <section class="cv-section">
-          <h2 class="cv-section__title" data-fr="Expérience">Experience</h2>
+        <section class="cv-section cv-section--experience">
+          <h2 class="cv-section__title" data-fr="Expérience">Work Experience</h2>
           
           <div class="cv-entry">
             <div class="cv-entry__header">
-              <span class="cv-entry__title" data-fr="Commis d'entrepôt">Warehouse Clerk</span>
-              <span class="cv-entry__date">2022–2025</span>
+              <span class="cv-entry__title">La Ronde – Six Flags</span>
+              <span class="cv-entry__place">Montréal, QC</span>
             </div>
-            <span class="cv-entry__sub">La Ronde – Six Flags, Montréal</span>
+            <div class="cv-entry__header">
+              <span class="cv-entry__sub" data-fr="Commis d'entrepôt">Warehouse Clerk</span>
+              <span class="cv-entry__date">2022 – 2025</span>
+            </div>
             <ul class="cv-entry__list">
-              <li data-fr="Réception et préparation des commandes tout en veillant au respect des normes de qualité.">Received and assembled orders while ensuring quality standards.</li>
-              <li data-fr="Maintenance d'un environnement d'entrepôt sûr et organisé.">Maintained a safe and organized warehouse environment.</li>
-              <li data-fr="Participation à l'élaboration et à la révision des rapports d'inventaire.">Assisted in making and reviewing inventory reports.</li>
+              <li data-fr="Réception et préparation des commandes en respectant systématiquement les normes de qualité.">Received and assembled orders while consistently meeting quality standards.</li>
+              <li data-fr="Préparation et révision des rapports d'inventaire ; maintien d'un environnement d'entrepôt sûr et organisé.">Prepared and reviewed inventory reports; maintained a safe, organized warehouse environment.</li>
             </ul>
           </div>
         </section>
